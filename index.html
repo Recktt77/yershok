@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the beauty of Switzerland - Explore cities, culture, and nature">
+    <title>Discover Switzerland</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d1ccccbe;
+            color: #333;
+        }
+        
+        .background-strip {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            background: url('vershiny_uedinenie_odinochestvo_125128_1920x1080.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+        
+        .background-strip-right {
+            left: auto;
+            right: 0;
+        }
+        
+        header {
+            position: relative;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        header h1 {
+            position: absolute;
+            z-index: 10;
+            font-size: 3rem;
+            margin: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        
+        .slider img.active {
+            display: block;
+        }
+        
+        .slider-buttons {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .slider-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        nav {
+            background-color: #d90000;
+            padding: 1rem;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        section {
+            padding: 2rem 150px;
+        }
+        
+        .attraction {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .attraction img {
+            width: 45%;
+            max-width: 600px;
+            height: auto;
+        }
+        
+        .attraction .text {
+            width: 45%;
+            max-width: 600px;
+            padding: 1rem;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background-strip"></div>
+    <div class="background-strip background-strip-right"></div>
+
+    <header>
+        <h1>Welcome to Switzerland</h1>
+        <div class="slider">
+            <img src="1000_F_508951402_pjHg78MWkEqsrTWtebhYJGkDo182LO5L.jpg" alt="Swiss Landscape 1" class="active">
+            <img src="shvejtsariia_les_zima_60889_1920x1080.jpg" alt="Swiss Landscape 2">
+            <img src="gory_vetki_ozero_129793_1920x1080.jpg" alt="Swiss Landscape 3">
+        </div>
+        <div class="slider-buttons">
+            <button onclick="prevSlide()">&#8249;</button>
+            <button onclick="nextSlide()">&#8250;</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#attractions">Attractions</a></li>
+            <li><a href="#cities">Cities</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Fotki</a></li>
+        </ul>
+    </nav>
+    <section id="attractions">
+        <h2>Explore Stunning Attractions</h2>
+        <div class="attraction">
+            <img src="large_zermatt-matterhorn-switzerland-shutterstock_1298208013_44fea015e5.jpeg" alt="Swiss Alps">
+            <div class="text">
+                <h3>Swiss Alps</h3>
+                <p>Experience breathtaking mountain views and serene alpine beauty. The Alps offer some of the best hiking, skiing, and panoramic views in the world, attracting visitors year-round.</p>
+            </div>
+        </div>
+        <div class="attraction">
+            <div class="text">
+                <h3>Crystal-Clear Lakes</h3>
+                <p>Relax by the pristine waters and enjoy the peace of Switzerland's natural landscapes. The lakes are perfect for kayaking, swimming, or simply enjoying the stunning reflections of the surrounding mountains.</p>
+            </div>
+            <img src="images.jpg" alt="Crystal-Clear Lakes">
+        </div>
+    </section>
+
+    <section id="cities">
+        <h2>Discover Charming Cities</h2>
+        <div class="attraction">
+            <img src="Zurich-City.jpg" alt="Zurich">
+            <div class="text">
+                <h3>Zurich</h3>
+                <p>Discover the vibrant nightlife, financial hub, and rich culture of Zurich. The city offers an excellent blend of historic old town charm and modern architecture, making it a favorite destination for travelers.</p>
+            </div>
+        </div>
+        <div class="attraction">
+            <div class="text">
+                <h3>Geneva</h3>
+                <p>Explore the city of diplomacy, surrounded by stunning natural beauty. Geneva is home to many international organizations, beautiful parks, and the iconic Jet d'Eau fountain.</p>
+            </div>
+            <img src="Weekend-Guide-to-Geneva.jpg" alt="Geneva">
+        </div>
+    </section>
+
+    <section id="culture">
+        <h2>Immerse Yourself in Culture</h2>
+        <div class="attraction">
+            <img src="avatar_1132_max.jpg" alt="Swiss Cheese">
+            <div class="text">
+                <h3>Swiss Cheese</h3>
+                <p>Taste world-famous Swiss cheese and fondue. Swiss cheese-making traditions date back centuries, and trying authentic fondue is a must for any visitor.</p>
+            </div>
+        </div>
+        <div class="attraction">
+            <div class="text">
+                <h3>Swiss Chocolate</h3>
+                <p>Indulge in the finest Swiss chocolate creations. From artisanal chocolates to globally recognized brands, Switzerland is a paradise for chocolate lovers.</p>
+            </div>
+            <img src="chocolate-799398_1280.jpg" alt="Swiss Chocolate">
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Contact 87715381331</p>
+        <p>&copy; 2024 Discover EREKE Switzerland.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider img');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+    </script>
+</body>
+
+</html>
